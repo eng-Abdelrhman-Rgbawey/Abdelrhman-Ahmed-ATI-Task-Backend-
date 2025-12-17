@@ -20,8 +20,8 @@ namespace Api.Profiles
                .ForMember(dest => dest.Percentage, opt => opt.Ignore());
 
             CreateMap<Student, StudentDto>()
-                       // Ignore navigation property to prevent cycles
-                       .ForMember(dest => dest.Id, opt => opt.MapFrom(src => src.Id)) // optional, explicit mapping
+                       
+                       .ForMember(dest => dest.Id, opt => opt.MapFrom(src => src.Id)) 
                        .ForMember(dest => dest.FullName, opt => opt.MapFrom(src => src.FullName))
                        .ForMember(dest => dest.Email, opt => opt.MapFrom(src => src.Email))
                        .ForMember(dest => dest.Phone, opt => opt.MapFrom(src => src.Phone))
