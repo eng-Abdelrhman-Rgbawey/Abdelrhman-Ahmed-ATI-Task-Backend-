@@ -20,7 +20,6 @@ namespace Api.Profiles
                .ForMember(dest => dest.Percentage, opt => opt.Ignore());
 
             CreateMap<Student, StudentDto>()
-                       
                        .ForMember(dest => dest.Id, opt => opt.MapFrom(src => src.Id)) 
                        .ForMember(dest => dest.FullName, opt => opt.MapFrom(src => src.FullName))
                        .ForMember(dest => dest.Email, opt => opt.MapFrom(src => src.Email))
